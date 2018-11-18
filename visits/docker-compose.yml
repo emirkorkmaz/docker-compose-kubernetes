@@ -1,0 +1,11 @@
+version: '3'
+
+services: 
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: on-failure
+    build: . # look at the current folder and search for the Dockerfile
+    ports: 
+      - 8081:8081
+  
